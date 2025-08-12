@@ -29,7 +29,7 @@ The project's complexity lies in the precise timing required for IR signal trans
 -   **Power:** 5V USB-C Power Supply
 -   **Enclosure:** Custom 3D Printed Case
 
-###⚡️Electrical Scheme
+### ⚡️Electrical Scheme
 
 Here is the simple electrical diagram for the project. The IR LED is connected to GPIO 2.
 
