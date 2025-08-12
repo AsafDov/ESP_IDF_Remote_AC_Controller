@@ -1,4 +1,4 @@
-# ⏻ ESP32 Web AC Remote Controller
+# ⏻ ESP32 WiFi AC Remote Controller
 
 A robust embedded systems project that transforms an ESP32 into a smart, web-controlled remote for my Electra air conditioning unit. This project showcases skills in reverse engineering, real-time operating systems (FreeRTOS), and full-stack embedded development, from hardware interfacing to a user-facing web server.
 
