@@ -1,5 +1,3 @@
-// ESP32 Server with static HTML page
-
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -13,8 +11,8 @@
 #include "esp_http_server.h"
 #include "driver/gpio.h"
 
-#define SSID "Dov SMART"
-#define PASS "0$43378976"
+#define SSID "*********"
+#define PASS "*********"
 #define IR_LED_PIN 2
 
 static bool led_state = 0; 
