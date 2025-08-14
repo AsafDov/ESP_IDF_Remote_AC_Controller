@@ -32,7 +32,9 @@ The project's complexity lies in the precise timing required for IR signal trans
 ### 📦 3D Printed Enclosure
 
 The custom-designed enclosure provides a compact and durable housing for the electronics.
-![Asaf Dov CV](https://github.com/user-attachments/assets/7147fcb9-5d54-4034-aa86-7c192160f8dc)
+<img width="574" height="198" alt="image" src="https://github.com/user-attachments/assets/f9a3b2ba-a613-4a74-8f67-43ad58b895ea" />
+
+
 *3D printed case.*
 
 ---
@@ -126,7 +128,7 @@ Open a web browser on any device connected to the same network and navigate to t
 
 ---
 
-##🔮 Future Improvements
+## 🔮 Future Improvements
 Full Remote Emulation: Decode and implement all buttons from the remote (temperature, fan speed, mode).
 
 Cloud Integration: Connect the device to an MQTT broker for control over the internet.
