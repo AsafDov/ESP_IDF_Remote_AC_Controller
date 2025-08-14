@@ -29,19 +29,11 @@ The project's complexity lies in the precise timing required for IR signal trans
 -   **Power:** 5V USB-C Power Supply
 -   **Enclosure:** Custom 3D Printed Case
 
-### ⚡️Electrical Scheme
-
-Here is the simple electrical diagram for the project. The IR LED is connected to GPIO 2.
-
-![Placeholder for Electrical Scheme](https://placehold.co/600x400/2d2d2d/ffffff?text=Electrical+Scheme+Here)
-*A simple circuit connecting the IR LED to a GPIO pin on the ESP32.*
-
 ### 📦 3D Printed Enclosure
 
 The custom-designed enclosure provides a compact and durable housing for the electronics.
-
-![Placeholder for 3D Box Design](https://placehold.co/600x400/2d2d2d/ffffff?text=3D+Printed+Case+Image)
-*Front and back view of the 3D printed case.*
+![Asaf Dov CV](https://github.com/user-attachments/assets/7147fcb9-5d54-4034-aa86-7c192160f8dc)
+*3D printed case.*
 
 ---
 
@@ -95,15 +87,20 @@ The most challenging aspect of this project was replicating the AC's IR signal. 
 
 1. **Signal Capture:** An IR receiver was connected to an oscilloscope to visualize the signal transmitted by the original remote control when the power button was pressed.
 
-2. **Signal Analysis:** The captured waveform was analyzed to determine the encoding scheme. The signal consists of a 38kHz carrier frequency modulated with specific pulse widths to represent logical '1's and '0's.
+2. **Signal Analysis:** The captured waveform was analyzed to determine the encoding scheme. The signal consists of a 38kHz carrier frequency modulated with specific pulse widths to represent logical '1's and '0's. The signal is normally pulled high, where a logical '1' is 0v and logical '2' is 2.5v.
 
   - **Logical '1':** A ~950µs pulse of the 38kHz carrier wave.
   
   - **Logical '0':** A ~950µs period of silence.
+    
+  - Each packet was sent 3 times followed by end of message bits. See the image from my oscilloscope:
+<img width="800" height="480" alt="DS0004" src="https://github.com/user-attachments/assets/10939751-4997-4f74-91c6-00880d62bb07" />
+
+
 
 3. **Code Replication:** The sequence of '1's and '0's forming the "power toggle" command was transcribed and implemented in the ac_power_code() function. A pulseIR() function generates the 38kHz carrier for the required duration by rapidly toggling a GPIO pin.
 
-[The captured IR signal on the oscilloscope, showing the pulse train for the power command.]
+
 
 ---
 
